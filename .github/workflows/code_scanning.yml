@@ -15,19 +15,7 @@
 name: "CodeQL"
 
 on:
-  schedule:
-    - cron: "0 0 * * 0" # Run every Sunday at midnight
-  pull_request:
-    types:
-      - opened
-      - synchronize
-    branches:
-      - main
-      - release-*
-  push:
-    branches:
-      - main
-      - release-*
+  workflow_dispatch
 
 jobs:
   analyze:
